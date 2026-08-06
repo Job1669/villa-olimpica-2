@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Nombre: Hernán Job Ramirez López
+Docente: Josafat Poctzin Dircio
+Materia: Programación web II
+Archivo: index.html
+Descripción: Página de Inicio del sitio responsivo de la tienda Villa Olímpica.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Inicio de la tienda deportiva Villa Olímpica.">
+    <title>Villa Olímpica | Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Encabezado principal y barra de navegación solicitada en el caso de estudio. -->
+    <header class="encabezado-sitio">
+        <div class="marca-textual">
+            <span class="marca-punto" aria-hidden="true"></span>
+            <span>Villa Olímpica</span>
+        </div>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a class="activo" href="index.html" aria-current="page">Inicio</a>
+            <a href="#articulos">Artículos</a>
+            <a href="#promociones">Promociones</a>
+            <a href="mas-vendidos.html">Más vendidos</a>
+            <a href="#facturacion">Facturación</a>
+            <a href="#sucursales">Sucursales</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Título introductorio de la página de Inicio. -->
+        <section class="presentacion">
+            <p class="etiqueta">Tienda deportiva</p>
+            <h1>Encuentra el equipo para tu siguiente meta</h1>
+            <p>Artículos para entrenamiento, fútbol, acondicionamiento físico y
+                actividades recreativas.</p>
+        </section>
+
+        <!-- Área central: tres columnas en tamaño grande, dos en mediano y una en pequeño. -->
+        <section class="inicio-grid" aria-label="Información principal de Villa Olímpica">
+            <article class="tarjeta inicio-logo">
+                <h2>Identidad de la tienda</h2>
+                <img decoding="async" src="img/logo-villa-olimpica.webp" alt="Logotipo propuesto de la tienda Villa Olímpica">
+            </article>
+
+            <article class="tarjeta quienes-somos">
+                <h2>Quiénes somos</h2>
+                <p>Villa Olímpica es una tienda deportiva dedicada a ofrecer artículos para
+                    entrenamiento, acondicionamiento físico, fútbol y actividades recreativas.
+                    Nuestro propósito es facilitar el acceso a productos funcionales y variados
+                    para personas que comienzan a practicar algún deporte o desean mejorar su
+                    equipo. Buscamos brindar una atención cercana, información clara y opciones
+                    adecuadas para diferentes necesidades deportivas.</p>
+                <a class="boton" href="mas-vendidos.html">Ver artículos más vendidos</a>
+            </article>
+
+            <article class="tarjeta entrada-tienda">
+                <h2>Visita nuestra tienda</h2>
+                <img loading="lazy" decoding="async" src="img/tienda-villa-olimpica.webp" alt="Ilustración de la entrada principal de la tienda Villa Olímpica">
+                <p>Conoce nuestros productos y recibe orientación para elegir el equipo adecuado.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página distribuido en tres columnas y adaptado a tamaños menores. -->
+    <footer class="pie-sitio">
+        <section>
+            <h2>Contacto</h2>
+            <p>Av. del Deporte 120, Col. Centro, Ciudad de México.</p>
+            <p>Tel. 55 5555 0188</p>
+        </section>
+
+        <section>
+            <h2>Información</h2>
+            <p>&copy; 2026 Villa Olímpica.</p>
+            <p><a href="mailto:contacto@villaolimpica.mx">contacto@villaolimpica.mx</a></p>
+        </section>
+
+        <section>
+            <h2>Redes sociales</h2>
+            <div class="redes" aria-label="Redes sociales propuestas">
+                <a href="#facebook" aria-label="Facebook">f</a>
+                <a href="#instagram" aria-label="Instagram">ig</a>
+                <a href="#x" aria-label="X">x</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+Nombre: Hernán Job Ramirez López
+Docente: Josafat Poctzin Dircio
+Materia: Programación web II
+Archivo: mas-vendidos.html
+Descripción: Página con seis artículos más vendidos de la tienda Villa Olímpica.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artículos más vendidos de la tienda deportiva Villa Olímpica.">
+    <title>Villa Olímpica | Más vendidos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Se reutiliza el mismo encabezado para mantener una navegación consistente. -->
+    <header class="encabezado-sitio">
+        <div class="marca-textual">
+            <span class="marca-punto" aria-hidden="true"></span>
+            <span>Villa Olímpica</span>
+        </div>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="#articulos">Artículos</a>
+            <a href="#promociones">Promociones</a>
+            <a class="activo" href="mas-vendidos.html" aria-current="page">Más vendidos</a>
+            <a href="#facturacion">Facturación</a>
+            <a href="#sucursales">Sucursales</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Encabezado de la sección de productos. -->
+        <section class="presentacion presentacion-compacta">
+            <p class="etiqueta">Selección destacada</p>
+            <h1>Artículos más vendidos</h1>
+            <p>Seis opciones deportivas organizadas en una cuadrícula responsiva.</p>
+        </section>
+
+        <!-- Cuadrícula: tres columnas en grande, dos en mediano y una en pequeño. -->
+        <section class="productos-grid" aria-label="Productos más vendidos">
+            <article class="producto">
+                <h2>Tenis Runner VO-210</h2>
+                <img loading="lazy" decoding="async" src="img/producto-1.png" alt="Ilustración de tenis deportivos Runner VO-210">
+                <p class="precio">$1,299.00</p>
+                <p>Calzado ligero con suela flexible, adecuado para entrenamiento diario
+                    y caminatas.</p>
+            </article>
+
+            <article class="producto">
+                <h2>Balón Titan VO-5</h2>
+                <img loading="lazy" decoding="async" src="img/producto-2.png" alt="Ilustración de balón deportivo Titan VO-5">
+                <p class="precio">$549.00</p>
+                <p>Balón tamaño 5 con cubierta resistente para prácticas recreativas
+                    y partidos.</p>
+            </article>
+
+            <article class="producto">
+                <h2>Mochila Active VO-30</h2>
+                <img loading="lazy" decoding="async" src="img/producto-3.png" alt="Ilustración de mochila deportiva Active VO-30">
+                <p class="precio">$699.00</p>
+                <p>Mochila con compartimento principal, bolsillo frontal y espacios
+                    laterales.</p>
+            </article>
+
+            <article class="producto">
+                <h2>Jersey Training VO-22</h2>
+                <img loading="lazy" decoding="async" src="img/producto-4.png" alt="Ilustración de jersey deportivo Training VO-22">
+                <p class="precio">$459.00</p>
+                <p>Playera deportiva de tela ligera que favorece la comodidad durante
+                    el ejercicio.</p>
+            </article>
+
+            <article class="producto">
+                <h2>Mancuernas Flex VO-10</h2>
+                <img loading="lazy" decoding="async" src="img/producto-5.png" alt="Ilustración de mancuernas deportivas Flex VO-10">
+                <p class="precio">$899.00</p>
+                <p>Par de mancuernas recubiertas para realizar rutinas básicas de
+                    fuerza.</p>
+            </article>
+
+            <article class="producto">
+                <h2>Botella Hydro VO-750</h2>
+                <img loading="lazy" decoding="async" src="img/producto-6.png" alt="Ilustración de botella deportiva Hydro VO-750">
+                <p class="precio">$279.00</p>
+                <p>Botella reutilizable de 750 ml con tapa de cierre seguro para
+                    entrenamientos.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- El pie de página conserva la misma información de la página de Inicio. -->
+    <footer class="pie-sitio">
+        <section>
+            <h2>Contacto</h2>
+            <p>Av. del Deporte 120, Col. Centro, Ciudad de México.</p>
+            <p>Tel. 55 5555 0188</p>
+        </section>
+
+        <section>
+            <h2>Información</h2>
+            <p>&copy; 2026 Villa Olímpica.</p>
+            <p><a href="mailto:contacto@villaolimpica.mx">contacto@villaolimpica.mx</a></p>
+        </section>
+
+        <section>
+            <h2>Redes sociales</h2>
+            <div class="redes" aria-label="Redes sociales propuestas">
+                <a href="#facebook" aria-label="Facebook">f</a>
+                <a href="#instagram" aria-label="Instagram">ig</a>
+                <a href="#x" aria-label="X">x</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

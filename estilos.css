@@ -1,0 +1,341 @@
+/*
+Nombre: Hernán Job Ramirez López
+Docente: Josafat Poctzin Dircio
+Materia: Programación web II
+Archivo: estilos.css
+Descripción: Estilos generales y media queries del sitio Villa Olímpica.
+*/
+
+/* Variables de color para mantener una apariencia consistente. */
+:root {
+    --azul-oscuro: #082a5e;
+    --azul: #0e5bd8;
+    --verde: #8cd600;
+    --naranja: #ff8a00;
+    --fondo: #f3f6fb;
+    --texto: #172033;
+    --blanco: #ffffff;
+    --borde: #d9e1ec;
+    --sombra: 0 10px 28px rgba(8, 42, 94, 0.12);
+}
+
+/* Reinicio básico para que las medidas sean más fáciles de controlar. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+/* Encabezado y navegación común para las dos páginas. */
+.encabezado-sitio {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 1rem clamp(1rem, 4vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.marca-textual {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.marca-punto {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--naranja);
+    box-shadow: -0.55rem 0.55rem 0 var(--verde);
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem;
+}
+
+.navegacion a {
+    text-decoration: none;
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.65rem;
+    font-size: 0.95rem;
+}
+
+.navegacion a:hover,
+.navegacion a:focus-visible,
+.navegacion a.activo {
+    background: var(--naranja);
+    color: var(--blanco);
+    outline: none;
+}
+
+/* Presentación superior de cada página. */
+.presentacion {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3.2rem 1.25rem 2rem;
+}
+
+.presentacion-compacta {
+    padding-bottom: 1.2rem;
+}
+
+.presentacion h1 {
+    margin: 0.25rem 0 0.75rem;
+    color: var(--azul-oscuro);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.12;
+}
+
+.presentacion p {
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.etiqueta {
+    color: var(--azul);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.82rem;
+}
+
+/* Cuadrículas principales en tamaño grande: tres columnas. */
+.inicio-grid,
+.productos-grid {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+.tarjeta,
+.producto {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 1.25rem;
+    box-shadow: var(--sombra);
+    padding: 1.35rem;
+}
+
+.tarjeta h2,
+.producto h2 {
+    margin-top: 0;
+    color: var(--azul-oscuro);
+    line-height: 1.25;
+}
+
+.inicio-logo {
+    background: linear-gradient(145deg, #061a3c, #0c367a);
+    color: var(--blanco);
+}
+
+.inicio-logo h2 {
+    color: var(--blanco);
+}
+
+.inicio-logo img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    border-radius: 0.9rem;
+}
+
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    border-radius: 0.7rem;
+    background: var(--naranja);
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+}
+
+.boton:hover,
+.boton:focus-visible {
+    background: #d96f00;
+}
+
+.entrada-tienda img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.9rem;
+}
+
+/* Tarjetas de la página Más vendidos. */
+.producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-radius: 0.85rem;
+    background: #f4f7fb;
+    margin-bottom: 0.75rem;
+}
+
+.producto p {
+    margin-top: 0.35rem;
+}
+
+.precio {
+    margin-bottom: 0;
+    color: var(--naranja);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+/* Pie de página en tres columnas para pantallas grandes. */
+.pie-sitio {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 2rem clamp(1rem, 4vw, 4rem);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.pie-sitio h2 {
+    margin-top: 0;
+    color: var(--verde);
+    font-size: 1.05rem;
+}
+
+.pie-sitio p {
+    margin: 0.25rem 0;
+}
+
+.pie-sitio a {
+    color: var(--blanco);
+}
+
+.redes {
+    display: flex;
+    gap: 0.65rem;
+}
+
+.redes a {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--azul);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.redes a:nth-child(2) {
+    background: var(--naranja);
+}
+
+.redes a:nth-child(3) {
+    background: var(--verde);
+    color: var(--azul-oscuro);
+}
+
+/* Tamaño mediano: contenido principal y footer en dos columnas. */
+@media (max-width: 900px) {
+    .encabezado-sitio {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navegacion {
+        justify-content: flex-start;
+    }
+
+    .inicio-grid,
+    .productos-grid,
+    .pie-sitio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Tamaño pequeño: todos los bloques se presentan en una sola columna. */
+@media (max-width: 600px) {
+    .encabezado-sitio {
+        position: static;
+        padding: 1rem;
+    }
+
+    .marca-textual {
+        font-size: 1.25rem;
+    }
+
+    .navegacion {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    .navegacion a {
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .presentacion {
+        padding-top: 2.2rem;
+    }
+
+    .inicio-grid,
+    .productos-grid,
+    .pie-sitio {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-grid,
+    .productos-grid {
+        width: min(100% - 1rem, 1180px);
+        gap: 1rem;
+    }
+
+    .tarjeta,
+    .producto {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
